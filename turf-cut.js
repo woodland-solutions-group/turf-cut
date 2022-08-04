@@ -24,7 +24,7 @@ function turfCut(poly, line){
   }
 
   // erase replaced by difference and buffer function changed significantly
-	var _axe = turf.buffer(line, 0.000000001, {units: 'meters'}),
+	var _axe = turf.buffer(line, 0.001, {units: 'meters'}),
       _body = turf.difference(poly, _axe),
       pieces = [];
 
